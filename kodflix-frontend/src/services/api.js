@@ -27,7 +27,7 @@ async function apiCall(endpoint, options = {}) {
   } catch (error) {
     console.error('API Error:', error)
     if (error.message === 'Failed to fetch') {
-      throw new Error('Cannot connect to server. Please check your internet connection.')
+      throw new Error('Failed to connect to backend. Error: ' + error.message)
     }
     throw error
   }
