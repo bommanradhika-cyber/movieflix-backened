@@ -28,6 +28,11 @@ const testConnection = async () => {
         return true;
     } catch (error) {
         console.error('Database connection failed:', error.message);
+        console.error('DB_HOST:', process.env.DB_HOST);
+        console.error('DB_PORT:', process.env.DB_PORT);
+        console.error('DB_USER:', process.env.DB_USER);
+        console.error('DB_NAME:', process.env.DB_NAME);
+        console.error('DB_SSL:', process.env.DB_SSL);
         return false;
     }
 };
