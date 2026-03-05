@@ -8,11 +8,9 @@ const { testConnection } = require('./config/database');
 
 const app = express();
 
-// CORS configuration
+// CORS configuration - allow all origins for testing
 const corsOptions = {
-    origin: process.env.NODE_ENV === 'production' 
-        ? process.env.FRONTEND_URL || 'https://movie-magic-hub.vercel.app'
-        : ['http://localhost:3000', 'http://localhost:5173', 'http://localhost:4200'],
+    origin: true,
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization']
