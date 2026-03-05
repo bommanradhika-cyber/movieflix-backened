@@ -10,8 +10,8 @@ const app = express();
 
 // CORS configuration - allow all origins for testing
 const corsOptions = {
-    origin: true,
-    credentials: true,
+    origin: '*',
+    credentials: false,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization']
 };
